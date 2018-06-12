@@ -74,13 +74,14 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
         // };
 
 		$http.post('https://upload.box.com/api/2.0/files/content', fileData, {
+            transformRequest : angular.identity,
 			withCredentials : true,
 			headers:{ 
-				'Authorization':  'Bearer '+'XI67tzl1DawXVgVxxeBdJmgln23fL3ND'
+				'Authorization':  'Bearer '+'DF1z9z2xMCU7v0ooE4QxrcihAYnO6GnU',
                 // "Access-Control-Allow-Headers": "Content-Type",
                 // "Access-Control-Allow-Methods": "POST",
                 // 'Access-Control-Allow-Origin': 'https://bmopoc.netlify.com',
-                // 'Content-Type': 'multipart/form-data'
+                'Content-Type': undefined
 			}
 		}).then(function(){
 			console.log("success");
