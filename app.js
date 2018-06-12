@@ -62,7 +62,7 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
         // fileData.append('parent.id',0);
         var filedata;
         var fileReader = new FileReader();
-        fileReader.readAsText(file, "UTF-8");
+        fileReader.readAsText(files[0], "UTF-8");
         fileReader.onload = function (evt) {
             filedata = {
             	file : fileReader.result,
