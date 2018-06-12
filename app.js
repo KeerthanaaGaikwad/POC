@@ -57,7 +57,7 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
         		break;
         }
         var fileData = new FormData();
-        fileData.append('data', files[0].name);
+        fileData.append('data', files[0]);
         var req = {
 			method: 'POST',
 			url: 'https://upload.box.com/api/2.0/files/content',
