@@ -59,7 +59,7 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
         var req = {
 			method: 'POST',
 			url: 'https://upload.box.com/api/2.0/files/content',
-			withCredentials : false,
+			withCredentials : true,
 			headers:{ 
 				'Authorization':  'Bearer ' + "OHcXAfDRyy0JNuhQ9WxFqoyc2tMfYFEJ",
 				'Access-Control-Allow-Origin': '*',
