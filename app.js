@@ -80,7 +80,7 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 				'Access-Control-Allow-Origin': 'https://bmopoc.netlify.com',
 				'Content-Type': 'multipart/form-data',
                 "Access-Control-Allow-Headers": "Content-Type",
-                "Access-Control-Allow-Methods", "POST"
+                "Access-Control-Allow-Methods": "POST"
 			}
 		}).then(function(){
 			console.log("success");
