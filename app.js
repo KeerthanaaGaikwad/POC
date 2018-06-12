@@ -73,12 +73,16 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 		var	data = { name: files[0].name, parent : {id:0} };
 
 
-		$http.post('https://upload.box.com/api/2.0/files/content', data, fileData, {
+		$http.post('https://upload.box.com/api/2.0/files/content', fileData, {
 			withCredentials : true,
 			headers:{ 
 				'Authorization':  'Bearer ' + "BoWaYlOik5QgjE3IOMkNnGuRFihVDryt",
 				'Access-Control-Allow-Origin': '*',
 				'Content-Type': 'multipart/form-data'
+			},
+			name : files[0].name,
+			parent : {
+				id : 0
 			}
 		}).then(function(){
 			console.log("success");
