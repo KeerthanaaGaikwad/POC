@@ -56,29 +56,27 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
         		$scope.PurDeed = files[0].name;
         		break;
         }
-        var fileData = new FormData();
-        fileData.append('file',files[0]);
-        fileData.append('name',files[0].name);
-        fileData.append('parent.id',0);
-  //       var req = {
-		// 	method: 'POST',
-		// 	url: 'https://upload.box.com/api/2.0/files/content',
-		// 	withCredentials : true,
-		// 	headers:{ 
-		// 		'Authorization':  'Bearer ' + "XwnXm398CDc4IBUbYPBIzdH68h75y8A6",
-		// 		'Access-Control-Allow-Origin': '*',
-		// 		'Content-Type': 'multipart/form-data'
-		// 	},
-		// 	data: { name: files[0].name, parent : {id:0} },
-		// }
-
-		// var	data = { name: files[0].name, parent : {id:0} };
-
+        // var fileData = new FormData();
+        // fileData.append('file',files[0]);
+        // fileData.append('name',files[0].name);
+        // fileData.append('parent.id',0);
+        var filedata;
+        var fileReader = new FileReader();
+        fileReader.readAsText(file, "UTF-8");
+        fileReader.onload = function (evt) {
+            filedata = {
+            	file : fileReader.result,
+            	name : files[0].name,
+            	parent : {
+            		id : 0
+            	}
+            }
+        };
 
 		$http.post('https://upload.box.com/api/2.0/files/content', fileData, {
 			withCredentials : true,
 			headers:{ 
-				'Authorization':  'Bearer ' + "IgWiBdLCyLTDADjUM8gA8ncm0XWmQ2Be",
+				'Authorization':  'Bearer ' + "YnZpWolZy5OC6upQ0xcQGUMD3jrqBzLN",
 				'Access-Control-Allow-Origin': '*',
 				'Content-Type': 'multipart/form-data'
 			}
