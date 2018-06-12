@@ -1,0 +1,62 @@
+<div class="main-area">
+        <h1>Mortgage Assesment Form</h1>
+        <div class="main-wrapper">
+          <div class="upload-sec">
+            <form class="form">
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">Proof of Income – T4 <button angular-popover direction="right" template="Tax form - T4" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                  <button ngf-select="uploadFiles($files, '0')" class="upload-bttn" ng-model="POFT4" multiple>Choose File</button>
+                </div>
+                <div>
+                  <p class="uploaded-file-name">{{POFT4}}</p>
+                </div>
+
+              </div>
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">Proof of Income – assessment 2016 <button angular-popover direction="right" template="Proof of income-2016" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                  <button ngf-select="uploadFiles($files, '1')" class="upload-bttn" ng-model="POIA01" multiple>Choose File</button>
+                </div>
+                <div>
+                  <p class="uploaded-file-name">{{POIA01}}</p>
+                </div>
+              </div>
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">Proof of Income – assessment 2017 <button angular-popover direction="right" template="Proof of income-2017" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                  <button ngf-select="uploadFiles($files, '2')" class="upload-bttn" ng-model="POIA02" multiple>Choose File</button>
+                </div>
+                <div>
+                  <p class="uploaded-file-name">{{POIA02}}</p>
+                </div>
+              </div>
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">Consent form for credit check <button angular-popover direction="right" template="Credit check consent form" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                  <button ngf-select="uploadFiles($files, '3')" class="upload-bttn" ng-model="CCC01" multiple>Choose File</button>
+                </div>
+                <div>
+                  <p class="uploaded-file-name">{{CCC01}}</p>
+                </div>
+              </div>
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">Purchase Deed <button angular-popover direction="right" template="Purchase Deed of house" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                <button ngf-select="uploadFiles($files, '5')" class="upload-bttn" ng-model="PurDeed" multiple>Choose File</button>
+                </div>
+                <div>
+                    <p class="uploaded-file-name">{{PurDeed}}</p>
+                  </div>
+                </div>
+            </form>
+          </div>
+          <div class="round-progress-bar">
+            <img src="assets/images/bmo-house.svg" class="bmo-house"/>
+            <pie-chart data="data" options="options"></pie-chart>
+          </div>
+        </div>
+         <div>
+          <button type="submit" id="submit" ng-click="test()">Submit</button>
+        </div>
+      </div>

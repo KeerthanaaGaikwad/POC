@@ -1,0 +1,72 @@
+<div class="main-area" style="padding-left: 174px;">
+        <h1>Mortgage Assesment Form - Third Party</h1>
+        <div class="main-wrapper">
+          <div class="upload-sec">
+            <form class="form">
+              <div style="margin-left: 19px;"><p> Application Number - 12345</p></div>
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">Credit Check Report <button angular-popover direction="right" template="Credit Check Report" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                  <button ngf-select="uploadFiles($files, '0')" class="upload-bttn" ng-model="CCR" multiple>Choose File</button>
+                </div>
+                <div>
+                  <p class="uploaded-file-name">{{CCR}}</p>
+                </div>
+
+              </div>
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">Assessor Report <button angular-popover direction="right" template="Assessor Report" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                  <button ngf-select="uploadFiles($files, '1')" class="upload-bttn" ng-model="AssessorRpt" multiple>Choose File</button>
+                </div>
+                <div>
+                  <p class="uploaded-file-name">{{AssessorRpt}}</p>
+                </div>
+              </div>
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">Attorney Report <button angular-popover direction="right" template="Attorney Report" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                  <button ngf-select="uploadFiles($files, '2')" class="upload-bttn" ng-model="AttorneyRpt" multiple>Choose File</button>
+                </div>
+                <div>
+                  <p class="uploaded-file-name">{{AttorneyRpt}}</p>
+                </div>
+              </div>
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">House Inspection <button angular-popover direction="right" template="House Inspection" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                  <button ngf-select="uploadFiles($files, '3')" class="upload-bttn" ng-model="HouseInspRpt" multiple>Choose File</button>
+                </div>
+                <div>
+                  <p class="uploaded-file-name">{{HouseInspRpt}}</p>
+                </div>
+              </div>
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">Attorney Report <button angular-popover direction="right" template="Attorney Report" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                <button ngf-select="uploadFiles($files, '4')" class="upload-bttn" ng-model="AttorneyRpt1" multiple>Choose File</button>
+                </div>
+                <div>
+                    <p class="uploaded-file-name">{{AttorneyRpt1}}</p>
+                  </div>
+                </div>
+              <div class="file-upload">
+                <div class="file-wrapper">
+                  <label class="file-upload-label">Assessor Report <button angular-popover direction="right" template="Assessor Report" class="bttn-wrapper"></button><img class="infoImg" src="assets/images/info.png"/></label>
+                  <button ngf-select="uploadFiles($files, '5')" class="upload-bttn" ng-model="AssessorRpt1" multiple>Choose File</button>
+                </div>
+                <div>
+                  <p class="uploaded-file-name">{{AssessorRpt1}}</p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- <div class="round-progress-bar">
+            <img src="assets/images/bmo-house.svg" class="bmo-house"/>
+            <pie-chart data="data" options="options"></pie-chart>
+          </div> -->
+        </div>
+         <div>
+          <button type="submit" id="submit" style="margin-right: 380px;margin-top: 40px" ng-click="test()">Submit</button>
+        </div>
+      </div>
