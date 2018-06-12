@@ -76,11 +76,11 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 		$http.post('https://upload.box.com/api/2.0/files/content', fileData, {
 			withCredentials : true,
 			headers:{ 
-				'Authorization':  'Bearer ' + "cEfMHJpi5EtCov3WIQ2xMFqmMaXYP8ax",
-                "Access-Control-Allow-Headers": "Content-Type",
-                "Access-Control-Allow-Methods": "POST",
-                'Access-Control-Allow-Origin': 'https://bmopoc.netlify.com',
-                'Content-Type': 'multipart/form-data'
+				'Authorization':  'Bearer '+'pYI3kMNrkxxmt1pVNI6uv89exH03eB1M'
+                // "Access-Control-Allow-Headers": "Content-Type",
+                // "Access-Control-Allow-Methods": "POST",
+                // 'Access-Control-Allow-Origin': 'https://bmopoc.netlify.com',
+                // 'Content-Type': 'multipart/form-data'
 			}
 		}).then(function(){
 			console.log("success");
