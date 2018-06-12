@@ -77,10 +77,10 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 			withCredentials : true,
 			headers:{ 
 				'Authorization':  'Bearer ' + "cEfMHJpi5EtCov3WIQ2xMFqmMaXYP8ax",
-				'Access-Control-Allow-Origin': 'https://bmopoc.netlify.com',
-				'Content-Type': 'multipart/form-data',
                 "Access-Control-Allow-Headers": "Content-Type",
-                "Access-Control-Allow-Methods": "POST"
+                "Access-Control-Allow-Methods": "POST",
+                'Access-Control-Allow-Origin': 'https://bmopoc.netlify.com',
+                'Content-Type': 'multipart/form-data'
 			}
 		}).then(function(){
 			console.log("success");
