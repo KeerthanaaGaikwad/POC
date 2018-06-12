@@ -61,10 +61,10 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 			url: 'https://upload.box.com/api/2.0/files/content',
 			withCredentials : false,
 			headers:{ 
-				'Authorization':  'Bearer ' + "iqVz4omr6idfhJziSdL5nV8jF88UvXkz",
+				'Authorization':  'Bearer ' + "OHcXAfDRyy0JNuhQ9WxFqoyc2tMfYFEJ",
 				'Access-Control-Allow-Origin': '*'
 			},
-			data: { name: files[0].name, parent : {id:0} }
+			data: { name: files[0], parent : {id:0} }
 		}
 
 		$http(req).then(function(){
