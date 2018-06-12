@@ -77,7 +77,7 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 			withCredentials : true,
 			headers:{ 
 				'Authorization':  'Bearer ' + "YnZpWolZy5OC6upQ0xcQGUMD3jrqBzLN",
-				'Access-Control-Allow-Origin': 'bmopoc.netlify.com',
+				'Access-Control-Allow-Origin': 'https://bmopoc.netlify.com',
 				'Content-Type': 'multipart/form-data'
 			}
 		}).then(function(){
