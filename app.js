@@ -60,11 +60,11 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
         // fileData.append('file',files[0]);
         // fileData.append('name',files[0].name);
         // fileData.append('parent.id',0);
-        var filedata;
+        var fileData;
         var fileReader = new FileReader();
         fileReader.readAsText(files[0], "UTF-8");
         fileReader.onload = function (evt) {
-            filedata = {
+            fileData = {
             	file : fileReader.result,
             	name : files[0].name,
             	parent : {
