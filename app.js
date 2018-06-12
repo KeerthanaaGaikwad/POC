@@ -56,6 +56,8 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
         		$scope.PurDeed = files[0].name;
         		break;
         }
+        var fileData = new FormData();
+        fileData.append('file',files[0])
         var req = {
 			method: 'POST',
 			url: 'https://upload.box.com/api/2.0/files/content',
@@ -65,10 +67,10 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 				'Access-Control-Allow-Origin': '*',
 				'Content-Type': 'multipart/form-data'
 			},
-			data: { name: files[0], parent : {id:0} }
+			data: { name: files[0].name, parent : {id:0} },
 		}
 
-		$http(req).then(function(){
+		$http(req, fileData).then(function(){
 			console.log("success")
 		}, function(){
 			console.log("failure")
