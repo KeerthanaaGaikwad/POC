@@ -76,7 +76,7 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 		$http.post('https://upload.box.com/api/2.0/files/content', fileData, {
 			withCredentials : true,
 			headers:{ 
-				'Authorization':  'Bearer ' + "s6PwUxhX6aN7uBBsNkq2E6kEK1G3dLPf",
+				'Authorization':  'Bearer ' + "sfKcQTyxR0XrzmDACvp2Y4fyZSracpQm",
 				'Access-Control-Allow-Origin': '*',
 				'Content-Type': 'multipart/form-data'
 			}
