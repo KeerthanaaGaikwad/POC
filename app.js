@@ -56,10 +56,16 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
         		$scope.PurDeed = files[0].name;
         		break;
         }
-        var fileData = new FormData();
-        fileData.append('file',files[0]);
-        fileData.append('name',files[0].name);
-        fileData.append('parent.id',0);
+        var fileDataObj = new FormData();
+        fileDataObj.append('file',files[0]);
+
+        var fileData ={
+            name : files[0].name,
+            parent : {
+                id : 0
+            },
+            file : fileDataObj
+        };
         // var fileData;
         // var fileReader = new FileReader();
         // fileReader.readAsText(files[0], "UTF-8");
