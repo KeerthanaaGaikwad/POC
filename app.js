@@ -57,24 +57,33 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
         		break;
         }
         var fileData = new FormData();
-        fileData.append('file',files[0])
-        var req = {
-			method: 'POST',
-			url: 'https://upload.box.com/api/2.0/files/content',
+        fileData.append('file',files[0]);
+  //       var req = {
+		// 	method: 'POST',
+		// 	url: 'https://upload.box.com/api/2.0/files/content',
+		// 	withCredentials : true,
+		// 	headers:{ 
+		// 		'Authorization':  'Bearer ' + "XwnXm398CDc4IBUbYPBIzdH68h75y8A6",
+		// 		'Access-Control-Allow-Origin': '*',
+		// 		'Content-Type': 'multipart/form-data'
+		// 	},
+		// 	data: { name: files[0].name, parent : {id:0} },
+		// }
+
+		$http.post('https://upload.box.com/api/2.0/files/content', fileData, {
 			withCredentials : true,
 			headers:{ 
-				'Authorization':  'Bearer ' + "XwnXm398CDc4IBUbYPBIzdH68h75y8A6",
+				'Authorization':  'Bearer ' + "BoWaYlOik5QgjE3IOMkNnGuRFihVDryt",
 				'Access-Control-Allow-Origin': '*',
 				'Content-Type': 'multipart/form-data'
 			},
-			data: { name: files[0].name, parent : {id:0} },
-		}
-
-		$http(req, fileData).then(function(){
-			console.log("success")
-		}, function(){
-			console.log("failure")
-		});
+			data: { name: files[0].name, parent : {id:0} }
+		}).then(function(){
+			console.log("success");
+		},function(){
+			console.log("failure");
+		})
+		
 	}
 
 }]);
