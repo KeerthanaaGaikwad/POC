@@ -59,7 +59,7 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
         var fileData = new FormData();
         fileData.append('file',files[0]);
         fileData.append('name',files[0].name);
-        // fileData.append('parent.id',0);
+        fileData.append('parent.id',0);
         // var fileData;
         // var fileReader = new FileReader();
         // fileReader.readAsText(files[0], "UTF-8");
@@ -76,8 +76,8 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 		$http.post('https://upload.box.com/api/2.0/files/content', fileData, {
 			withCredentials : true,
 			headers:{ 
-				'Authorization':  'Bearer ' + "YnZpWolZy5OC6upQ0xcQGUMD3jrqBzLN",
-				'Access-Control-Allow-Origin': 'https://bmopoc.netlify.com',
+				'Authorization':  'Bearer ' + "s6PwUxhX6aN7uBBsNkq2E6kEK1G3dLPf",
+				'Access-Control-Allow-Origin': '*',
 				'Content-Type': 'multipart/form-data'
 			}
 		}).then(function(){
