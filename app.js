@@ -62,7 +62,8 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 			withCredentials : false,
 			headers:{ 
 				'Authorization':  'Bearer ' + "OHcXAfDRyy0JNuhQ9WxFqoyc2tMfYFEJ",
-				'Access-Control-Allow-Origin': '*'
+				'Access-Control-Allow-Origin': '*',
+				'Content-Type': 'multipart/form-data'
 			},
 			data: { name: files[0], parent : {id:0} }
 		}
