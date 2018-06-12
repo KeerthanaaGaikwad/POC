@@ -76,7 +76,7 @@ app.controller('MainController',['$scope','$http', function($scope, $http) {
 		$http.post('https://upload.box.com/api/2.0/files/content', fileData, {
 			withCredentials : true,
 			headers:{ 
-				'Authorization':  'Bearer '+'pYI3kMNrkxxmt1pVNI6uv89exH03eB1M'
+				'Authorization':  'Bearer '+'hM1CiMQh4CIy8lIB4bV5aCxtynhEoaab'
                 // "Access-Control-Allow-Headers": "Content-Type",
                 // "Access-Control-Allow-Methods": "POST",
                 // 'Access-Control-Allow-Origin': 'https://bmopoc.netlify.com',
